@@ -1,0 +1,13 @@
+# Ignore artifacts:
+build
+coverage
+.cache
+.git
+.idea
+.vscode
+node_modules
+public
+
+**/*.json
+**/*.svg
+**/*.mdx
