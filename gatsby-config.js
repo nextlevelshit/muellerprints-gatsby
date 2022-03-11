@@ -1,8 +1,10 @@
+const config = require(`./config/site.config.js`);
+const pathPrefix = config.pathPrefix === `/` ? `` : config.pathPrefix;
+
 module.exports = {
-    siteMetadata: {
-        title: `MUELLERPRINTS.`,
-        siteUrl: `https://muellerprints.de/`
-    },
+	siteMetadata: {
+		siteUrl: config.siteUrl + pathPrefix,
+	},
     plugins: [
         "gatsby-plugin-styled-components",
         "gatsby-plugin-image",
@@ -11,6 +13,39 @@ module.exports = {
         "gatsby-plugin-mdx",
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
+		{
+			resolve: "gatsby-plugin-manifest",
+			options: {
+				name: config.siteTitleAlt,
+				short_name: config.siteTitlePrefix,
+				description: config.siteDescription,
+				start_url: config.pathPrefix,
+				background_color: config.backgroundColor,
+				theme_color: config.themeColor,
+				display: "standalone",
+				icon: config.favicon,
+			},
+		},
+		{
+			resolve: "gatsby-plugin-sitemap",
+			options: {
+				output: `/sitemap.xml`,
+				exclude: [],
+				query: `
+					{
+						site {
+							siteMetadata {
+								siteUrl
+							}
+						}
+						allSitePage {
+							nodes {
+								path
+							}
+						}
+					}`
+			}
+		},
         {
             resolve: "gatsby-source-filesystem",
             options: {
@@ -32,13 +67,8 @@ module.exports = {
                 path: "./src/pages",
             },
         },
-        // {
-        //     resolve: "gatsby-plugin-mdx",
-        //     options: {
-        //         defaultLayouts: {
-        //             // default: require.resolve("./src/templates/default.template.js"),
-        //         },
-        //     },
-        // }
+        {
+            resolve: "gatsby-plugin-mdx"
+        }
     ]
 };

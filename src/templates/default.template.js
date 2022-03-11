@@ -1,12 +1,23 @@
 import React from "react"
-import {MDXProvider} from "@mdx-js/react"
-import {Link} from "gatsby"
-import OrderForm from "../ui/orderForm"
+import SEO from "../components/seo"
+import Header from "../components/header"
+import Footer from "../components/footer"
 
-const shortcodes = {OrderForm, Link, wrapper: ({children}) => <>{children}</>}
+import "./main.css"
 
-const DefaultTemplate = ({children}) => (
-	<MDXProvider components={shortcodes}>{children}</MDXProvider>
-)
+const DefaultTemplate = ({ children, title, description }) => {
+	return (
+		<>
+			<SEO pageSEO={{ title, description }} />
+			<Header title={title} />
+
+			<main>
+				<article>{children}</article>
+			</main>
+
+			<Footer />
+		</>
+	)
+}
 
 export default DefaultTemplate
