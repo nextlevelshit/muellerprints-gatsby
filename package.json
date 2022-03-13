@@ -13,7 +13,7 @@
 		"build": "gatsby build",
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
-		"format": "prettier --write ./src/**/*.{js,mdx}"
+		"format": "prettier --write ./src/**/*.{js,css} ./pages/**/*.mdx"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",
@@ -34,10 +34,12 @@
 		"gatsby-plugin-styled-components": "^5.5.0",
 		"gatsby-source-filesystem": "^4.5.2",
 		"gatsby-transformer-sharp": "^4.5.0",
+		"jquery": "^3.6.0",
 		"prettier": "^2.5.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-helmet": "^6.1.0",
+		"remark-disable-tokenizers": "^1.1.0",
 		"slug": "^5.3.0",
 		"styled-components": "^5.3.3"
 	},
@@ -49,5 +51,8 @@
 		"bracketSpacing": true,
 		"arrowParens": "always",
 		"printWidth": 120
+	},
+	"devDependencies": {
+		"prop-types": "^15.8.1"
 	}
 }

@@ -26,7 +26,20 @@ module.exports = {
 		"gatsby-plugin-image",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-sharp",
-		"gatsby-plugin-mdx",
+		{
+			resolve: "gatsby-plugin-mdx",
+			options: {
+				remarkPlugings: [
+					[require("remark-disable-tokenizers"), {
+						block: [
+							"indentedCode",
+							"fencedCode",
+							"blockquote"
+						]
+					}]
+				]
+			}
+		},
 		{
 			resolve: "gatsby-plugin-sitemap",
 			options: {

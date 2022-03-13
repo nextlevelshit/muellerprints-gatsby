@@ -1,15 +1,18 @@
 const path = require("path")
-const slug = require("slug")
+const slugify = require("slug")
+const config = require("./config/site-config")
 
 exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions
 	const resolveTemplate = (template) => path.resolve(`src/templates/${template}.js`)
+	const component = path.resolve("src/templates/default.js")
 
 	return graphql(`
     query allPagesQuery {
       allMdx {
         nodes {
 			body
+			slug
 			frontmatter {
 			  background
 			  description
@@ -27,10 +30,10 @@ exports.createPages = ({ graphql, actions }) => {
 			throw result.errors
 		}
 
-		result.data.allMdx.nodes.forEach(({ frontmatter, body  }) => {
+		result.data.allMdx.nodes.forEach(({ frontmatter, body, slug  }) => {
 			createPage({
-				path: "landingpage" === frontmatter.layout ? "/" : slug(frontmatter.title),
-				component: resolveTemplate(frontmatter.layout),
+				path: slug || "/",
+				component,
 				context: {
 					...frontmatter,
 					body
