@@ -1,10 +1,10 @@
 import * as React from "react"
-import {StaticImage} from "gatsby-plugin-image";
-import {useEffect, useState} from "react";
-import {examples} from "../../../config/beispiele";
+import { StaticImage } from "gatsby-plugin-image";
+import { useEffect, useState } from "react";
+import { examples } from "../../../config/beispiele";
 
-const ExamplePage = ({params: { id = "0"}}) => {
-	const [displayedExample, setDisplayedExample] = useState({title: "", description: "", links: [], images: []})
+const ExamplePage = ({ params: { id = "0" } }) => {
+	const [displayedExample, setDisplayedExample] = useState({ title: "", description: "", links: [], images: [] })
 
 	useEffect(() => {
 

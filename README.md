@@ -1,54 +1,53 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+## Migration from Jekyll to GatsbyJS
 
-## 🚀 Quick start
+### Comments
 
-1. **Create a Gatsby site.**
+BEFORE:
+```
+<!-- This was invisible -->
+```
 
-   Use the Gatsby CLI to create a new site, specifying the minimal starter.
+AFTER:
+```
+{/* This is invisible */}
+```
 
-   ```shell
-   # create a new Gatsby site using the minimal starter
-   npm init gatsby
-   ```
+### Only self-closing HTML tags
 
-2. **Start developing.**
+All HTML tags need a corresponding closing tag or at least MUST be self-closing.
+Adding a `/` before the closing `>` makes it easily work.
 
-   Navigate into your new site’s directory and start it up.
+BEFORE:
+```
+<br>
 
-   ```shell
-   cd my-gatsby-site/
-   npm run develop
-   ```
+<hr>
 
-3. **Open the code and start customizing!**
+<img src="...">
 
-   Your site is now running at http://localhost:8000!
+<input type="..">
+```
 
-   Edit `src/pages/index.mdx` to see your site update in real-time!
+AFTER:
+```
+<br/>
+<hr/>
 
-4. **Learn more**
+<img src="..."/>
 
-	- [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<input type="..">
+```
 
-	- [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### className
 
-	- [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Use the attribute `className` instead of `class`.
 
-	- [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+BEFORE:
+```
+<span class="help-block"/>
+```
 
-	- [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-	- [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+AFTER:
+```
+<span className="help-block"/>
+```

@@ -1,6 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-import config from "../../config/site.config"
+import config from "../../config/site-config"
 
 const SEO = ({ pagePath = "", pageSEO }) => {
 	let title

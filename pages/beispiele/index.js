@@ -3,7 +3,7 @@ import ExamplePage from "./[id]";
 
 const BeispieleIndexPage = () => {
 	return (
-		<ExamplePage params={{id:0}}/>
+		<ExamplePage params={{ id: 0 }}/>
 	)
 }
 

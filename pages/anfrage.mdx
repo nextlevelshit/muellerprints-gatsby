@@ -1,0 +1,210 @@
+---
+layout: default
+title: Anfrage
+navigation: Anfrage
+background: red-light
+order: 1
+description: Wichtige Angaben, die wir für eine Kalkulation benötigen
+robots: follow
+---
+<div className="flowing-text">
+  <h2>Wichtige Angaben, die wir für eine Kalkulation benötigen:</h2>
+  <br/>
+  <ol>
+    <li>
+      Name
+    </li>
+    <li>
+      Telefonnummer (für Rückfragen)
+    </li>
+    <li>
+      Stichwort
+    </li>
+    <li>
+      Produkt (Buch, Flyer, Postkarte, Visitenkarte ...)
+    </li>
+    <li>
+      Format
+      <br/>Geben Sie bitte die genauen Maße Ihres Druckprodukts an und zwar das Endformat.
+    </li>
+    <li>
+      Seitenanzahl
+      <br/>Bei einem mehrseitigen Produkt bitte die exakte Seitenanzahl angeben.
+    </li>
+    <li>
+      Farbigkeit
+      <br/>Beide Seiten farbig (4/4-farbig),
+      <br/>Die Vorderseite farbig und die Rückseite schwarz (4/1-farbig)
+      <br/>Nur eine Seite farbig und die andere Seite blanko (4/0-farbig)
+      <br/>Vorderseite und Rückseite schwarz (1/1-farbig)
+      <br/>Nur eine Seite schwarz und die andere Seite blanko (1/0-farbig)
+    </li>
+    <li>
+      Papier und Gewicht
+      <br/><b>Beispiel:</b>
+      <br/>Munken Lynx 120g/qm oder Bilderdruck matt 170g/qm
+    </li>
+    <li>
+      Verarbeitung
+      <br/>Wenn Ihr Produkt weiterverarbeitet werden soll, geben Sie bitte die Art an.
+      <br/>Dies gilt für alle Formen der Weiterverarbeitung und Veredelung.
+      <br/>
+      <strong>Beispielsweise:</strong>
+      <br/>
+      <b>Bindeart:</b> Softcover oder Hardcover, Klebebindung oder Fadenheftung
+      <br/>
+      <b>Falzart:</b> Wickelfalz, Zickzackfalz, Altarfalz
+      <br/>
+      <b>Cellophanierung:</b> matt, glänzend, Soft-Touch-Folie
+      <br/>
+      <b>Prägung:</b> blind (ohne Farbe nur tiefgeprägt), Heißfolienprägung (mit Farbe)
+    </li>
+    <li>
+      Auflage
+    </li>
+    <li>
+      Gewünschter Fertigstellungstermin
+    </li>
+  </ol>
+  <br/>
+  <h2>Via Email direkt</h2>
+  <ul>
+    <li>
+      <a href="mailto:muellerprints@t-online.de">muellerprints. Digitaldruck</a>
+    </li>
+    <li>
+      <a href="mailto:info@buchbinderei-mende.de">Buchbinderei Mende</a>
+    </li>
+  </ul>
+  <br/>
+  <a id="form"/>
+  <h2>Der bessere Weg — <br/>Anfrageformular ausfüllen und abschicken</h2>
+  <div className="text-small">[*] Pflichtangaben</div>
+  <br/>
+  <div>
+    <div id="success" className="alert alert-info" style="display: none;">
+      <center>Ihre Anfrage wurde erfolgreich verschickt! Bei Rückfragen können Sie uns werktags unter + 49 (0)711 / 262
+        49 64 erreichen.
+      </center>
+    </div>
+    <div id="notifications" className="alert alert-danger" style="display: none;"/>
+
+    <div className="row">
+      <form className="form" method="POST" id="inquiry">
+        <div className="form-group">
+          <label for="inputName" className="control-label col-sm-8">Vor- & Nachname *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="name"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputPhone" className="control-label col-sm-8">Telefonnummer [für Rückfragen] *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="phone"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputEmail" className="control-label col-sm-8">E-Mail-Adresse *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="mail"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputKeyword" className="control-label col-sm-8">Stichwort [Artbeitstitel, Dateiname, ...]
+            *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="title"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputProduct" className="control-label col-sm-8">Produkt [Buch, Heft, Flyer, Postkarte, ...]
+            *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="product"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputSice" className="control-label col-sm-8">Format [mm] *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="format"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputPages" className="control-label col-sm-8">Seitenanzahl *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="pages"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputFormat" className="control-label col-sm-8">Ausrichtung *</label>
+          <div className="col-sm-8">
+            <select className="form-control input selectpicker" data-style="form-control" name="orientation">
+              <option>Hochformat</option>
+              <option>Querformat</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label for="inputPrint" className="control-label col-sm-8">Druck [Farbigkeit] *</label>
+          <div className="col-sm-8">
+            <select className="form-control selectpicker" data-style="form-control" name="printing">
+              <option>1-seitig [nur Vorderseite bedruckt]</option>
+              <option>2-seitig [Vorder- &amp; Rückseite bedruck] duplex</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label for="inputColors" className="control-label col-sm-8">Farbe *</label>
+          <div className="col-sm-8">
+            <select className="selectpicker form-control" data-style="form-control" name="colors">
+              <option>1/0 farbig schwarz/blanko</option>
+              <option>1/1 farbig schwarz/schwarz</option>
+              <option>4/0 farbig Euroskala/blanko</option>
+              <option>4/1 farbig Euroskala/schwarz</option>
+              <option>4/4 farbig Euroskala/Euroskala</option>
+            </select>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputPaper" className="control-label col-sm-8">Papier, Gewicht [z.B. Munken Lynx 120g/m²]
+            *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="material"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputEdition" className="control-label col-sm-8">Auflage [Stückzahl] *</label>
+          <div className="col-sm-8">
+            <input type="text" className="form-control" placeholder="" name="edition"/>
+            <span className="help-block"/>
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputMessage" className="control-label col-sm-8">Objektbeschreibung [Bindeart: Hardcover,
+            Softcover, Veredelung, Prägung, Liefertermin, etc.]</label>
+          <div className="col-sm-8">
+            <textarea rows="6" className="form-control" name="description"/>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <div className="col-sm-8">
+            <br/>
+            <br/>
+            <button type="submit" className="btn btn-primary">Abschicken</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

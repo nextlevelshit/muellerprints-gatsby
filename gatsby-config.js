@@ -1,31 +1,32 @@
-const config = require(`./config/site.config.js`);
-const pathPrefix = config.pathPrefix === `/` ? `` : config.pathPrefix;
+const config = require("./config/site-config")
+const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix
 
 module.exports = {
 	siteMetadata: {
-		siteUrl: config.siteUrl + pathPrefix,
+		siteUrl: config.siteUrl + pathPrefix
 	},
-    plugins: [
-        "gatsby-plugin-styled-components",
-        "gatsby-plugin-image",
-        "gatsby-plugin-react-helmet",
-        "gatsby-plugin-sitemap",
-        "gatsby-plugin-mdx",
-        "gatsby-plugin-sharp",
-        "gatsby-transformer-sharp",
+	plugins: [
 		{
-			resolve: "gatsby-plugin-manifest",
+			resolve: "gatsby-source-filesystem",
 			options: {
-				name: config.siteTitleAlt,
-				short_name: config.siteTitlePrefix,
-				description: config.siteDescription,
-				start_url: config.pathPrefix,
-				background_color: config.backgroundColor,
-				theme_color: config.themeColor,
-				display: "standalone",
-				icon: config.favicon,
+				"name": "pages",
+				"path": "./pages/"
 			},
+			__key: "pages"
 		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				"name": "images",
+				"path": "./src/images/"
+			},
+			__key: "images"
+		},
+		"gatsby-plugin-styled-components",
+		"gatsby-plugin-image",
+		"gatsby-plugin-react-helmet",
+		"gatsby-plugin-sharp",
+		"gatsby-plugin-mdx",
 		{
 			resolve: "gatsby-plugin-sitemap",
 			options: {
@@ -43,32 +44,23 @@ module.exports = {
 								path
 							}
 						}
-					}`
+					}
+				`
 			}
 		},
-        {
-            resolve: "gatsby-source-filesystem",
-            options: {
-                "name": "images",
-                "path": "./src/images/"
-            },
-            __key: "images"
-        }, {
-            resolve: "gatsby-source-filesystem",
-            options: {
-                "name": "pages",
-                "path": "./src/pages/"
-            },
-            __key: "pages"
-        },
-        {
-            resolve: "gatsby-plugin-page-creator",
-            options: {
-                path: "./src/pages",
-            },
-        },
-        {
-            resolve: "gatsby-plugin-mdx"
-        }
-    ]
-};
+		"gatsby-transformer-sharp",
+		{
+			resolve: "gatsby-plugin-manifest",
+			options: {
+				name: config.siteTitleAlt,
+				short_name: config.siteTitlePrefix,
+				description: config.siteDescription,
+				start_url: config.pathPrefix,
+				background_color: config.backgroundColor,
+				theme_color: config.themeColor,
+				display: "standalone",
+				icon: config.favicon
+			}
+		}
+	]
+}
