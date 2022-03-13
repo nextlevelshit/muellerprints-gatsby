@@ -2,7 +2,7 @@ module.exports = {
 	/**
 	 * Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 	 */
-	pathPrefix: "/",
+	pathPrefix: "/muellerprints-gatsby",
 	/**
 	 * Navigation brand and site title
 	 */
@@ -14,7 +14,7 @@ module.exports = {
 	/**
 	 * Domain of your site without trailing slash
 	 */
-	siteUrl: "https://muellerprints.de",
+	siteUrl: "https://nextlevelshit.github.io",
 	/**
 	 * Language Tag on <html> element
 	 */
