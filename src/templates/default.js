@@ -5,15 +5,14 @@ import Footer from "../components/footer"
 
 import "./main.css"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Helmet from "react-helmet"
 
-const DefaultTemplate = ({ location, pageContext: { body, description, title, fading, background } }) => {
+const DefaultTemplate = ({ location, pageContext: { body, description, title, fading, background, robots, layout } }) => {
 	return (
-		<>
+		<article className={`${fading && "fading"} canvas-${background}`}>
 			<Meta pageSEO={{ title, description }} />
-			<Header title={title} color={background} />
+			<Header title={title} color={background} pagination={layout === "pagination"} />
 
-			<main className={`${fading && "fading"} canvas-${background}`}>
+			<main>
 				<div className="container">
 					<MDXRenderer>{body}</MDXRenderer>
 				</div>
@@ -29,7 +28,7 @@ const DefaultTemplate = ({ location, pageContext: { body, description, title, fa
 			<script type="text/javascript" src="/scripts/send-inquiry.js" />
 			<script type="text/javascript" src="/scripts/send-checklist.js" />
 			<script type="text/javascript" src="/scripts/hardcover-calculation.js" />
-		</>
+		</article>
 	)
 }
 

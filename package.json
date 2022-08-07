@@ -52,7 +52,7 @@
 		"singleQuote": false,
 		"bracketSpacing": true,
 		"arrowParens": "always",
-		"printWidth": 120
+		"printWidth": 160
 	},
 	"devDependencies": {
 		"prop-types": "^15.8.1"

@@ -18,7 +18,7 @@ module.exports = {
 			resolve: "gatsby-source-filesystem",
 			options: {
 				"name": "images",
-				"path": "./src/images/"
+				"path": "./static/images/"
 			},
 			__key: "images"
 		},
@@ -29,12 +29,12 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-mdx",
 			options: {
-				remarkPlugings: [
+				remarkPlugins: [
 					[require("remark-disable-tokenizers"), {
 						block: [
 							"indentedCode",
 							"fencedCode",
-							"blockquote"
+							"blockquote",
 						]
 					}]
 				]
@@ -44,7 +44,7 @@ module.exports = {
 			resolve: "gatsby-plugin-sitemap",
 			options: {
 				output: `/sitemap.xml`,
-				exclude: [],
+				excludes: [],
 				query: `
 					{
 						site {

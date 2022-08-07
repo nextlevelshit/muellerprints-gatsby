@@ -22,7 +22,7 @@ module.exports = {
 	/**
 	 * Your image for og:image tag. You can find it in the /static folder
 	 */
-	siteBanner: "/assets/banner.jpg",
+	siteBanner: "./static/images/digi_logo.png",
 	/**
 	 * Your image for favicons. You can find it in the /src folder
 	 */
@@ -42,7 +42,7 @@ module.exports = {
 	/**
 	 * Image for schemaORGJSONLD
 	 */
-	siteLogo: "/assets/logo.png",
+	siteLogo: "./static/images/digi_logo.png",
 	/**
 	 * Name of maintainer
 	 */
@@ -54,7 +54,7 @@ module.exports = {
 	/**
 	 * Image of Maintainer
 	 */
-	maintainerLogo: "/assets/icons/nextlevelshit-logo-black2.png",
+	maintainerLogo: "/icons/nextlevelshit-logo-black2.png",
 	/**
 	 * URL of Maintainer
 	 */
@@ -78,7 +78,7 @@ module.exports = {
 	/**
 	 * Picture or icon of the Instagram logo
 	 */
-	instagramIcon: "/assets/icons/instagram.jpg",
+	instagramIcon: "/icons/instagram.jpg",
 	/**
 	 * Feature toggle to show instagram account or not
 	 */

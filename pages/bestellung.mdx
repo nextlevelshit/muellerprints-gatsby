@@ -3,6 +3,261 @@ layout: default
 title: Druckauftrag
 navigation: Bestellung
 background: orange-dark
+description: Druckauftrag abschicken
 order: 3
 ---
+<div className="flowing-text">
+	<h2>Druckauftrag · Bestellung</h2>
+	<br />
+	<strong>Wenn Sie uns einen Druckauftrag erteilen und uns Ihre Druckdaten schicken, dann füllen Sie bitte folgendes
+		Bestellformular und die Checkliste vollständig aus. Vorheriger Emailverkehr, mündliche, bzw. telefonische
+		Absprachen werden nicht berücksichtigt. Dieses Bestellformular ist gültig und dient als Auftragsbestätigung,
+		sowie verbindliche Checkliste zur Produktionsüberwachung Ihres Auftrages. Bitte überprüfen Sie deshalb alle
+		Angaben nochmals auf ihre Richtigkeit, bevor Sie das Formular abschicken.</strong>
+	<br />
+	<div id="success" className="alert alert-info" style="display: none;">
+		<center>Ihre Bestellung wurde erfolgreich verschickt! Bei Rückfragen können Sie uns werktags unter + 49
+			(0)711 / 262 49 64 erreichen.
+			<br /><b>Sie können jetzt mit dem Upload-Link Ihre Druckdaten versenden.</b></center>
+	</div>
 
+	<div id="notifications" className="alert alert-danger" style="display: none;"></div>
+
+	<div className="row">
+		<form className="form" method="POST" id="checklist">
+			<div className="col-sm-12">
+
+				<h2>Bestellformular bitte sorgfältig ausfüllen</h2>
+				<div className="text-small">[*] Pflichtangaben</div>
+
+				<h3>Rechnungsanschrift</h3>
+			</div>
+
+			<div className="form-group">
+				<label for="name" className="control-label col-sm-8">Vor- &amp; Nachname *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="name" name="name" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="street" className="control-label col-sm-8">Straße *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="street" name="street" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+
+			<div className="form-group">
+				<label for="zip" className="control-label col-sm-8">Postleitzahl*</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="zip" name="zip" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+
+			<div className="form-group">
+				<label for="town" className="control-label col-sm-5">Stadt *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="town" name="town" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+
+			<div className="form-group">
+				<label for="phone" className="control-label col-sm-8">Telefonnummer [für Rückfragen] *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="phone" name="phone" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="mail" className="control-label col-sm-8">Email-Adresse *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="mail" name="mail" />
+					<span className="help-block"></span>
+					<br />
+					<h3>Checkliste für Druck und Weiterverarbeitung</h3>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="title" className="control-label col-sm-8">Stichwort [Artbeitstitel, Dateiname, ...]
+					*</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="title" name="title" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="product" className="control-label col-sm-8">Produkt [Buch, Heft, Flyer, Postkarte,
+					...] *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="product" name="product" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="format" className="control-label col-sm-8">Beschnittenes Endformat [mm] *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="format" name="format" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="pages" className="control-label col-sm-8">Seitenanzahl *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="pages" name="pages" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="orientation" className="control-label col-sm-8">Ausrichtung *</label>
+				<div className="col-sm-8">
+					<div className="dropdown bootstrap-select form-control input"><select
+						className="form-control input selectpicker" data-style="form-control" name="orientation"
+						id="orientation" tabindex="0">
+						<option>Hochformat</option>
+						<option>Querformat</option>
+					</select>
+						<button type="button" className="btn dropdown-toggle form-control"
+								data-toggle="dropdown" role="button" data-id="orientation" title="Hochformat">
+							<div className="filter-option">
+								<div className="filter-option-inner">
+									<div className="filter-option-inner-inner">Hochformat</div>
+								</div>
+							</div>
+							<span className="bs-caret"><span className="caret"></span></span></button>
+						<div className="dropdown-menu open" role="combobox">
+							<div className="inner open" role="listbox" aria-expanded="false" tabindex="0">
+								<ul className="dropdown-menu inner "></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="form-group">
+				<label for="printing" className="control-label col-sm-8">Druck [Farbigkeit] *</label>
+				<div className="col-sm-8">
+					<div className="dropdown bootstrap-select form-control"><select
+						className="form-control selectpicker" data-style="form-control" name="printing"
+						id="printing" tabindex="0">
+						<option>1-seitig [nur Vorderseite bedruckt]</option>
+						<option>2-seitig [Vorder- &amp; Rückseite bedruck] duplex</option>
+					</select>
+						<button type="button" className="btn dropdown-toggle form-control"
+								data-toggle="dropdown" role="button" data-id="printing"
+								title="1-seitig [nur Vorderseite bedruckt]">
+							<div className="filter-option">
+								<div className="filter-option-inner">
+									<div className="filter-option-inner-inner">1-seitig [nur Vorderseite
+										bedruckt]
+									</div>
+								</div>
+							</div>
+							<span className="bs-caret"><span className="caret"></span></span></button>
+						<div className="dropdown-menu open" role="combobox">
+							<div className="inner open" role="listbox" aria-expanded="false" tabindex="0">
+								<ul className="dropdown-menu inner "></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="form-group">
+				<label for="colors" className="control-label col-sm-8">Farbe *</label>
+				<div className="col-sm-8">
+					<div className="dropdown bootstrap-select form-control"><select
+						className="selectpicker form-control" data-style="form-control" id="colors"
+						name="colors" tabindex="0">
+						<option>1/0 farbig schwarz/blanko</option>
+						<option>1/1 farbig schwarz/schwarz</option>
+						<option>4/0 farbig Euroskala/blanko</option>
+						<option>4/1 farbig Euroskala/schwarz</option>
+						<option>4/4 farbig Euroskala/Euroskala</option>
+					</select>
+						<button type="button" className="btn dropdown-toggle form-control"
+								data-toggle="dropdown" role="button" data-id="colors"
+								title="1/0 farbig schwarz/blanko">
+							<div className="filter-option">
+								<div className="filter-option-inner">
+									<div className="filter-option-inner-inner">1/0 farbig schwarz/blanko</div>
+								</div>
+							</div>
+							<span className="bs-caret"><span className="caret"></span></span></button>
+						<div className="dropdown-menu open" role="combobox">
+							<div className="inner open" role="listbox" aria-expanded="false" tabindex="0">
+								<ul className="dropdown-menu inner "></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="material" className="control-label col-sm-8">Inhalt - Papier, Gewicht [z.B. Munken
+					Lynx 120g/m²] *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="material" name="material" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="cover-material" className="control-label col-sm-8">Umschlag (Cover) - Papier,
+					Gewicht [z.B. Munken Lynx 300g/m²] *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="cover-material"
+						   name="cover-material" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="edition" className="control-label col-sm-8">Auflage [Stückzahl] *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="edition" name="edition" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+			<div className="form-group">
+				<label for="description" className="control-label col-sm-8">Verarbeitung [Bindeart, Hardcover,
+					Softcover, Veredelung, Prägung, Cellophanierung, Sonstiges, ...] * </label>
+				<div className="col-sm-8">
+							<textarea type="text" rows="6" className="form-control" id="description"
+									  name="description"></textarea>
+				</div>
+			</div>
+
+			<div className="form-group">
+				<label for="date" className="control-label col-sm-8">Fertigstellung Wunschtermin *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" data-provide="datepicker"
+						   data-date-format="dd.mm.yyyy" data-date-language="de"
+						   data-date-today-highlight="true" data-date-days-of-week-disabled="0,6"
+						   data-date-autoclose="true" placeholder="" name="date" id="date" />
+					<span className="help-block"></span>
+				</div>
+			</div>
+
+			<div className="form-group">
+
+				<div className="col-sm-8">
+					<br />
+					<br />
+					<button type="submit" className="btn btn-primary">Abschicken</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+	<br />
+	<h2>Finale Druckdaten</h2>
+	<ul>
+		<li>Hier können Sie Ihre Druckdaten ganz einfach hochladen.</li>
+		<li>Sie können pro Übertragung bis zu 200 GB senden.</li>
+	</ul>
+	<br />
+	<h2>Upload-Link</h2>
+	<ul>
+		<li><a href="//muellerprints.wetransfer.com">muellerprints.wetransfer.com</a></li>
+	</ul>
+</div>
