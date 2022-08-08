@@ -62,16 +62,6 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 			<meta name="twitter:url" content={url} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={image} />
-			<link
-				rel="stylesheet"
-				type="text/css"
-				href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-			/>
-			<link
-				rel="stylesheet"
-				type="text/css"
-				href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-			/>
 			{/* Matomo */}
 			<script type="text/javascript"
 					dangerouslySetInnerHTML={{
@@ -92,9 +82,24 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 					}}
 			/>
 			{/* End Matomo Code */}
-
+			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+					integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+					crossOrigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+					integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+					crossOrigin="anonymous"></script>
+			{/*<script type="text/javascript" src="/libs/bootstrap-select.js" />*/}
+			{/*<script type="text/javascript" src="/libs/bootstrap-datepicker.min.js" />*/}
+			{/*<script type="text/javascript" src="/libs/bootstrap-datepicker.de.min.js" />*/}
+			<script type="text/javascript" src="/scripts/scroll-top.js" />
+			{/*<script type="text/javascript" src="/scripts/send-inquiry.js" />*/}
+			{/*<script type="text/javascript" src="/scripts/send-checklist.js" />*/}
+			<script type="text/javascript" src="/scripts/hardcover-calculation.js" />
 		</Helmet>
+
 	)
 }
+
+// https://stackoverflow.com/questions/22658015/bootstrap-throws-uncaught-error-bootstraps-javascript-requires-jquery
 
 export default Meta

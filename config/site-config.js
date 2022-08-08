@@ -14,7 +14,7 @@ module.exports = {
 	/**
 	 * Domain of your site without trailing slash
 	 */
-	siteUrl: "http://muellerprints.c15t.de/",
+	siteUrl: "http://muellerprints.c15t.de",
 	/**
 	 * Language Tag on <html> element
 	 */
@@ -22,11 +22,11 @@ module.exports = {
 	/**
 	 * Your image for og:image tag. You can find it in the /static folder
 	 */
-	siteBanner: "./static/images/digi_logo.png",
+	siteBanner: "/images/digi_logo.png",
 	/**
 	 * Your image for favicons. You can find it in the /src folder
 	 */
-	favicon: "./static/favicon.png",
+	favicon: "/favicon.png",
 	/**
 	 * Site brand name used for titles, navigation etc.
 	 */
@@ -42,11 +42,11 @@ module.exports = {
 	/**
 	 * Image for schemaORGJSONLD
 	 */
-	siteLogo: "./static/images/digi_logo.png",
+	siteLogo: "/images/digi_logo.png",
 	/**
 	 * Name of maintainer
 	 */
-	maintainerName: "NEXT LEVEL SHIT",
+	maintainerName: "Michael Werner Czechowski",
 	/**
 	 * Displayed title of maintainer
 	 */

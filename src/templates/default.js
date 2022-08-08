@@ -19,15 +19,6 @@ const DefaultTemplate = ({ location, pageContext: { body, description, title, fa
 			</main>
 
 			<Footer />
-			<script type="text/javascript" src="/libs/jquery.min.js" />
-			<script type="text/javascript" src="/libs/bootstrap.min.js"/>
-			<script type="text/javascript" src="/libs/bootstrap-select.js" />
-			<script type="text/javascript" src="/libs/bootstrap-datepicker.min.js" />
-			<script type="text/javascript" src="/libs/bootstrap-datepicker.de.min.js" />
-			<script type="text/javascript" src="/scripts/scroll-top.js" />
-			<script type="text/javascript" src="/scripts/send-inquiry.js" />
-			<script type="text/javascript" src="/scripts/send-checklist.js" />
-			<script type="text/javascript" src="/scripts/hardcover-calculation.js" />
 		</article>
 	)
 }
