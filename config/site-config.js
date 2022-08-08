@@ -26,7 +26,7 @@ module.exports = {
 	/**
 	 * Your image for favicons. You can find it in the /src folder
 	 */
-	favicon: "/favicon.png",
+	favicon: "./static/favicon.png",
 	/**
 	 * Site brand name used for titles, navigation etc.
 	 */
@@ -50,7 +50,7 @@ module.exports = {
 	/**
 	 * Displayed title of maintainer
 	 */
-	maintainerTitle: "Konzipiert und realisiert von NEXT LEVEL SHIT",
+	maintainerTitle: "Konzipiert und realisiert von Michael Werner Czechowski",
 	/**
 	 * Image of Maintainer
 	 */
