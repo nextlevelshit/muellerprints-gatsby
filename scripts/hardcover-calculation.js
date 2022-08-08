@@ -1,14 +1,15 @@
 function gross() {
-  var form = document.calculation;
-  var trim = 18; // Beschnittzugabe
-  var joint = 5; // Gelenk
+	const form = document?.calculation
+	const trim = 18 // Beschnittzugabe
+	const joint = 5 // Gelenk
 
-  form.grossWidth.value =
-    parseInt(form.width.value) * 2 +
-    parseInt(form.strength.value) +
-    (trim + joint) * 2;
+	if (!form?.grossWidth || !form?.grossHeight) return
 
-  form.grossHeight.value =
-    parseInt(form.height.value) +
-    trim * 2;
+		form.grossWidth.value = (form.width.value && form.strength.value) ?
+			(parseInt(form.width.value.trim()) * 2 +
+				parseInt(form.strength.value.trim()) +
+				(trim + joint) * 2) : ""
+
+	form.grossHeight.value = form.height.value ?
+		(parseInt(form.height.value.trim()) + trim * 2) : ""
 }
