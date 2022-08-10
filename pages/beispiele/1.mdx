@@ -12,6 +12,28 @@ pagination: true
 	<h2>"Günter Krauss - Ein Bilderbuch"</h2>
 </div>
 
+<div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+	<div className="carousel-inner">
+		<div className="carousel-item active">
+			<img src="/images/carousel-images/ClaraMainetti1.JPG" className="d-block w-100" alt="..." />
+		</div>
+		<div className="carousel-item">
+			<img src="/images/carousel-images/ClaraMainetti1.JPG" className="d-block w-100" alt="..." />
+		</div>
+		<div className="carousel-item">
+			<img src="/images/carousel-images/ClaraMainetti1.JPG" className="d-block w-100" alt="..." />
+		</div>
+	</div>
+	<button className="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+		<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span className="sr-only">Previous</span>
+	</button>
+	<button className="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+		<span className="carousel-control-next-icon" aria-hidden="true"></span>
+		<span className="sr-only">Next</span>
+	</button>
+</div>
+
 <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
 
 	<ol className="carousel-indicators">
@@ -84,14 +106,14 @@ pagination: true
 		</div>
 	</div>
 
-	<a className="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	<button className="left carousel-control" role="button" data-slide="prev">
 		<span className="glyphicon glyphicon-chevron-left" aria-hidden="true" />
 		<span className="sr-only">Previous</span>
-	</a>
-	<a className="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	</button>
+	<button className="right carousel-control" role="button" data-slide="next">
 		<span className="glyphicon glyphicon-chevron-right" aria-hidden="true" />
 		<span className="sr-only">Next</span>
-	</a>
+	</button>
 </div>
 
 <div className="flowing-text">

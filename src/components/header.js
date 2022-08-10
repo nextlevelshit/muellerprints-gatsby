@@ -2,9 +2,11 @@ import * as React from "react"
 import config from "../../config/site-config"
 import { graphql, useStaticQuery } from "gatsby"
 
-const Header = ({ title: pageTitle, color, pagination }) => {
+const Header = ({ title: pageTitle, color, pagination, location }) => {
+	const isActivePagination = (int) => location?.pathname.indexOf(int) >= 0 ?? false
+
 	const {
-		allMdx: { nodes },
+		allMdx: { nodes }
 	} = useStaticQuery(graphql`
 		query navigationQuery {
 			allMdx(
@@ -27,7 +29,7 @@ const Header = ({ title: pageTitle, color, pagination }) => {
 
 	const navigation = nodes.map(({ slug, frontmatter }) => ({
 		slug,
-		...frontmatter,
+		...frontmatter
 	}))
 
 	return (
@@ -80,48 +82,9 @@ const Header = ({ title: pageTitle, color, pagination }) => {
 					<div className={`navbar-logo-text text-${color}`}>{pageTitle ?? config.siteBrand}</div>
 					{pagination && <ul className="navbar-logo-pagination">
 
-						<li className="navbar-logo-pagination-item">
-
-							<span>1</span>
-
-						</li>
-
-						<li className="navbar-logo-pagination-item">
-
-							<a href="/beispiele/2">2</a>
-
-						</li>
-
-						<li className="navbar-logo-pagination-item">
-
-							<a href="/beispiele/3">3</a>
-
-						</li>
-
-						<li className="navbar-logo-pagination-item">
-
-							<a href="/beispiele/4">4</a>
-
-						</li>
-
-						<li className="navbar-logo-pagination-item">
-
-							<a href="/beispiele/5">5</a>
-
-						</li>
-
-						<li className="navbar-logo-pagination-item">
-
-							<a href="/beispiele/6">6</a>
-
-						</li>
-
-						<li className="navbar-logo-pagination-item">
-
-							<a href="/beispiele/7">7</a>
-
-						</li>
-
+						{[...Array(9).keys()].slice(1).map((i) => <li key={i} className="navbar-logo-pagination-item">
+							{isActivePagination(i) ? <span>{i}</span> : <a href={`/beispiele/${i}`}>{i}</a>}
+						</li>)}
 					</ul>}
 				</div>
 			</div>
