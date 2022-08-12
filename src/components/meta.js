@@ -16,7 +16,7 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 
 	const schemaOrgJSONLD = [
 		{
-			"@context": "http://schema.org",
+			"@context": "https://schema.org",
 			"@type": "WebSite",
 			"@id": url,
 			url,
@@ -62,16 +62,6 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 			<meta name="twitter:url" content={url} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={image} />
-			<link
-				rel="stylesheet"
-				type="text/css"
-				href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-			/>
-			<link
-				rel="stylesheet"
-				type="text/css"
-				href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-			/>
 			{/* Matomo */}
 			<script type="text/javascript"
 					dangerouslySetInnerHTML={{
@@ -92,9 +82,15 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 					}}
 			/>
 			{/* End Matomo Code */}
-
+			<script type="text/javascript" src="/scripts/scroll-top.js" />
+			{/*<script type="text/javascript" src="/scripts/send-inquiry.js" />*/}
+			{/*<script type="text/javascript" src="/scripts/send-checklist.js" />*/}
+			<script type="text/javascript" src="/scripts/hardcover-calculation.js" />
 		</Helmet>
+
 	)
 }
+
+// https://stackoverflow.com/questions/22658015/bootstrap-throws-uncaught-error-bootstraps-javascript-requires-jquery
 
 export default Meta

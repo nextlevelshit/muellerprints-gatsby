@@ -2,7 +2,7 @@ module.exports = {
 	/**
 	 * Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 	 */
-	pathPrefix: "/muellerprints-gatsby",
+	pathPrefix: "/",
 	/**
 	 * Navigation brand and site title
 	 */
@@ -14,7 +14,7 @@ module.exports = {
 	/**
 	 * Domain of your site without trailing slash
 	 */
-	siteUrl: "https://nextlevelshit.github.io",
+	siteUrl: "http://muellerprints.c15t.de",
 	/**
 	 * Language Tag on <html> element
 	 */
@@ -22,7 +22,7 @@ module.exports = {
 	/**
 	 * Your image for og:image tag. You can find it in the /static folder
 	 */
-	siteBanner: "/assets/banner.jpg",
+	siteBanner: "/images/digi_logo.png",
 	/**
 	 * Your image for favicons. You can find it in the /src folder
 	 */
@@ -42,19 +42,19 @@ module.exports = {
 	/**
 	 * Image for schemaORGJSONLD
 	 */
-	siteLogo: "/assets/logo.png",
+	siteLogo: "/images/digi_logo.png",
 	/**
 	 * Name of maintainer
 	 */
-	maintainerName: "NEXT LEVEL SHIT",
+	maintainerName: "Michael Werner Czechowski",
 	/**
 	 * Displayed title of maintainer
 	 */
-	maintainerTitle: "Konzipiert und realisiert von NEXT LEVEL SHIT",
+	maintainerTitle: "Konzipiert und realisiert von Michael Werner Czechowski",
 	/**
 	 * Image of Maintainer
 	 */
-	maintainerLogo: "/assets/icons/nextlevelshit-logo-black2.png",
+	maintainerLogo: "/icons/nextlevelshit-logo-black2.png",
 	/**
 	 * URL of Maintainer
 	 */
@@ -78,7 +78,7 @@ module.exports = {
 	/**
 	 * Picture or icon of the Instagram logo
 	 */
-	instagramIcon: "/assets/icons/instagram.jpg",
+	instagramIcon: "/icons/instagram.jpg",
 	/**
 	 * Feature toggle to show instagram account or not
 	 */

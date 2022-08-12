@@ -17,7 +17,7 @@ const Footer = () => {
 										<a href="mailto:muellerprints@t-online.de">muellerprints@t-online.de</a>
 									</li>
 									<li>
-										<a href="/office-hours.html">Öffnungszeiten</a>
+										<a href="/office-hours">Öffnungszeiten</a>
 									</li>
 								</ul>
 							</div>
@@ -29,13 +29,13 @@ const Footer = () => {
 								<ul>
 									<li />
 									<li>
-										<a href="/imprint.html">Impressum</a>
+										<a href="/imprint">Impressum</a>
 									</li>
 									<li>
-										<a href="/disclaimer.html">Datenschutz</a>
+										<a href="/disclaimer">Datenschutz</a>
 									</li>
 									<li>
-										<a href="/payment.html">Zahlungsarten</a>
+										<a href="/payment">Zahlungsarten</a>
 									</li>
 								</ul>
 							</div>
@@ -47,12 +47,11 @@ const Footer = () => {
 								<ul>
 									<li />
 									<li>
-										<a href="/links.html">Links</a>
+										<a href="/links">Links</a>
 									</li>
 									<li>
-										<a href="/anfahrt.html">Anfahrt</a>
+										<a href="/anfahrt">Anfahrt</a>
 									</li>
-									<li />
 								</ul>
 							</div>
 						</div>
