@@ -83,8 +83,8 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 			/>
 			{/* End Matomo Code */}
 			<script type="text/javascript" src="/scripts/scroll-top.js" />
-			{/*<script type="text/javascript" src="/scripts/send-inquiry.js" />*/}
-			{/*<script type="text/javascript" src="/scripts/send-checklist.js" />*/}
+			<script type="text/javascript" src="/scripts/send-inquiry.js" />
+			<script type="text/javascript" src="/scripts/send-checklist.js" />
 			<script type="text/javascript" src="/scripts/hardcover-calculation.js" />
 		</Helmet>
 
