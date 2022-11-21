@@ -16,12 +16,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js 18.7
+    - name: Use Node.js 18.4
       uses: actions/setup-node@v3
       with:
-        node-version: 18.7
+        node-version: 18.4
         cache: "npm"
-    - run: npm ci --legacy-peer-deps
+    - run: npm i --legacy-peer-deps --prefer-offline --no-audit --progress=false
     - run: npm run build
     - run: ls -a
 
