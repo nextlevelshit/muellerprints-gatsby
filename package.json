@@ -4,13 +4,11 @@
 	"private": true,
 	"description": "MUELLERPRINTS.",
 	"author": "Michael Czechowski",
-	"keywords": [
-		"gatsby"
-	],
 	"scripts": {
 		"start": "gatsby develop",
 		"clean": "gatsby clean",
-		"publish": "gatsby build --prefix-paths && gh-pages -d public"
+		"build": "gatsby build --prefix-paths",
+		"publish": "npm run build && gh-pages -d public"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",
