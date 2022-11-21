@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: 18.4
         cache: "npm"
-    - run: npm i --legacy-peer-deps --prefer-offline --no-audit --progress=false --registry https://registry.npmjs.org
+    - run: npm --legacy-peer-deps --prefer-offline --no-audit --progress=false --registry https://registry.npmjs.org i
     - run: npm run build
     - run: ls -a
 
