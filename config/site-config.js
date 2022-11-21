@@ -14,7 +14,7 @@ module.exports = {
 	/**
 	 * Domain of your site without trailing slash
 	 */
-	siteUrl: "http://muellerprints.c15t.de",
+	siteUrl: "http://www.muellerprints.de",
 	/**
 	 * Language Tag on <html> element
 	 */
