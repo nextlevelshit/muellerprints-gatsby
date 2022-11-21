@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: 18.7
         cache: "npm"
-    - run: npm i
+    - run: npm ci --legacy-peer-deps
     - run: npm run build
     - run: ls -a
 
