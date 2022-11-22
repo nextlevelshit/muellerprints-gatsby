@@ -31,11 +31,10 @@ jobs:
 
     needs: build
     steps:
-    - uses: youxingz/sshpass-scp-action@v3
-    - name: SSHPASS
+    - uses: actions/checkout@v3
+    - name: SSH Copy
+      uses: youxingz/sshpass-scp-action@v3
       with:
-        node-version: 18.x
-        cache: 'npm'
         host: ${{ secrets.TELEKOM_HOST }}
         username: ${{ secrets.TELEKOM_AUTH }}
         password: ${{ secrets.TELEKOM_PASS }}
