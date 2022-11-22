@@ -15,17 +15,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+      - uses: actions/checkout@v3
 
-    - name: Install Node Packages
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.4
-        cache: "npm"
-    - run: npm i --legacy-peer-deps --prefer-offline --no-audit --progress=false --registry https://registry.npmjs.org
-    - run: npm run build
-    - run: ls -a
+      - name: Install Node Packages
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.4
+          cache: "npm"
+      - run: npm i --legacy-peer-deps --prefer-offline --no-audit --progress=false --registry https://registry.npmjs.org
+      - run: npm run build
+      - run: ls -a
+
+      - name: SSH Clean
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.TELEKOM_HOST }}
+          username: ${{ secrets.TELEKOM_USER }}
+          password: ${{ secrets.TELEKOM_PASS }}
+          port: ${{ secrets.TELEKOM_PORT }}
+          script: ls -a /home/www/pablo/
 
 #    - name: Publish
 #      uses: easingthemes/ssh-deploy@v3.0.1
