@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  Publish:
+  publish:
 
     runs-on: ubuntu-latest
 
@@ -36,21 +36,23 @@ jobs:
           port: ${{ secrets.TELEKOM_PORT }}
           script: rm -r /home/www/public_html.next/*
 
+      - name: SSH Copy
+        uses: youxingz/sshpass-scp-action@v3
+        timeout-minutes: 10
+        with:
+          host: ${{ secrets.TELEKOM_HOST }}
+          user: ${{ secrets.TELEKOM_AUTH }}
+          pass: ${{ secrets.TELEKOM_PASS }}
+          dist: /home/www/public_html.next
+          src: public
+
 #    - name: Publish
 #      uses: easingthemes/ssh-deploy@v3.0.1
 #      env:
-##          SSH_PRIVATE_KEY: ${{ secrets.TELEKOM_SSH }}
+#          SSH_PRIVATE_KEY: ${{ secrets.TELEKOM_SSH }}
 #          REMOTE_HOST: ${{ secrets.TELEKOM_HOST }}
-#          REMOTE_USER: ${{ secrets.TELEKOM_USER }}
+#          REMOTE_USER: ${{ secrets.TELEKOM_AUTH }}
 #          TARGET: /home/www/pablo
 #          SOURCE: /public
 
-    - name: SSH Copy
-      uses: youxingz/sshpass-scp-action@v3
-      timeout-minutes: 10
-      with:
-        host: ${{ secrets.TELEKOM_HOST }}
-        user: ${{ secrets.TELEKOM_USER }}
-        pass: ${{ secrets.TELEKOM_PASS }}
-        dist: /home/www/public_html.next
-        src: public
+
