@@ -25,7 +25,7 @@ jobs:
           cache: "npm"
       - run: npm ci --legacy-peer-deps --prefer-offline --no-audit --progress=false --registry https://registry.npmjs.org
       - run: npm run build
-      - run: ls -a
+#      - run: ls -a
 
       - name: SSH Clean
         uses: appleboy/ssh-action@master
@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.TELEKOM_USER }}
           password: ${{ secrets.TELEKOM_PASS }}
           port: ${{ secrets.TELEKOM_PORT }}
-          script: rm -r /home/www/pablo/
+          script: rm -r /home/www/public_html.next/*
 
 #    - name: Publish
 #      uses: easingthemes/ssh-deploy@v3.0.1
