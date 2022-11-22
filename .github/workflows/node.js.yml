@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.TELEKOM_USER }}
           password: ${{ secrets.TELEKOM_PASS }}
           port: ${{ secrets.TELEKOM_PORT }}
-          script: ls -a /home/www/pablo/
+          script: rm -r /home/www/pablo/
 
 #    - name: Publish
 #      uses: easingthemes/ssh-deploy@v3.0.1
