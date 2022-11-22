@@ -15,8 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout
     - uses: actions/checkout@v3
-    - name: Use Node.js 18.4
+
+    - name: Install Node Packages
       uses: actions/setup-node@v3
       with:
         node-version: 18.4
@@ -24,12 +26,22 @@ jobs:
     - run: npm i --legacy-peer-deps --prefer-offline --no-audit --progress=false --registry https://registry.npmjs.org
     - run: npm run build
     - run: ls -a
-    - name: SSH Copy
-      uses: youxingz/sshpass-scp-action@v3
-      timeout-minutes: 10
-      with:
-        host: ${{ secrets.TELEKOM_HOST }}
-        user: ${{ secrets.TELEKOM_AUTH }}
-        pass: ${{ secrets.TELEKOM_PASS }}
-        dist: /home/www/pablo
-        src: public
+
+#    - name: Publish
+#      uses: easingthemes/ssh-deploy@v3.0.1
+#      env:
+#          SSH_PRIVATE_KEY: ${{ secrets.TELEKOM_SSH }}
+#          REMOTE_HOST: ${{ secrets.TELEKOM_HOST }}
+#          REMOTE_USER: ${{ secrets.TELEKOM_AUTH }}
+#          TARGET: /home/www/pablo
+#          SOURCE: /public
+
+#    - name: SSH Copy
+#      uses: youxingz/sshpass-scp-action@v3
+#      timeout-minutes: 10
+#      with:
+#        host: ${{ secrets.TELEKOM_HOST }}
+#        user: ${{ secrets.TELEKOM_AUTH }}
+#        pass: ${{ secrets.TELEKOM_PASS }}
+#        dist: /home/www/pablo
+#        src: public
