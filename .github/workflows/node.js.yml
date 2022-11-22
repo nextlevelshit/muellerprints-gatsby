@@ -26,6 +26,7 @@ jobs:
     - run: ls -a
     - name: SSH Copy
       uses: youxingz/sshpass-scp-action@v3
+      timeout-minutes: 10
       with:
         host: ${{ secrets.TELEKOM_HOST }}
         user: ${{ secrets.TELEKOM_AUTH }}
