@@ -36,7 +36,7 @@ jobs:
       uses: youxingz/sshpass-scp-action@v3
       with:
         host: ${{ secrets.TELEKOM_HOST }}
-        username: ${{ secrets.TELEKOM_AUTH }}
-        password: ${{ secrets.TELEKOM_PASS }}
+        user: ${{ secrets.TELEKOM_AUTH }}
+        pass: ${{ secrets.TELEKOM_PASS }}
         dist: /home/www/pablo
         src: public
