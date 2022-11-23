@@ -45,7 +45,7 @@ jobs:
           user: ${{ secrets.TELEKOM_USER }}
           pass: ${{ secrets.TELEKOM_PASS }}
           dist: /home/www/public_html.next
-          src: public
+          src: public/*
 
 #    - name: Publish
 #      uses: easingthemes/ssh-deploy@v3.0.1
