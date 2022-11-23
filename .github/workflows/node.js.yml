@@ -42,7 +42,7 @@ jobs:
         timeout-minutes: 10
         with:
           host: ${{ secrets.TELEKOM_HOST }}
-          user: ${{ secrets.TELEKOM_AUTH }}
+          user: ${{ secrets.TELEKOM_USER }}
           pass: ${{ secrets.TELEKOM_PASS }}
           dist: /home/www/public_html.next
           src: public
