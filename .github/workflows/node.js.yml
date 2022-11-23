@@ -38,6 +38,7 @@ jobs:
 
       - name: SSH Copy
         uses: youxingz/sshpass-scp-action@v3
+        if: always()
         timeout-minutes: 10
         with:
           host: ${{ secrets.TELEKOM_HOST }}
