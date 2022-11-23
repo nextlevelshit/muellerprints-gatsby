@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.TELEKOM_USER }}
           password: ${{ secrets.TELEKOM_PASS }}
           port: ${{ secrets.TELEKOM_PORT }}
-          script: rm -r /home/www/public_html.next/*
+          script: rm -r /home/www/public_html.next/* || true
 
       - name: SSH Copy
         uses: youxingz/sshpass-scp-action@v3
