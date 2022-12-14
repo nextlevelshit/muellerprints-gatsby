@@ -1,14 +1,14 @@
 $(document).ready(function () {
   $('#checklist').submit(function (event) {
+		// prevent submitting form
+		event.preventDefault();
 
-    let checklist = $(this).serializeObject();
+    let checklist = $(this).serialize();
     let submit = $('#checklist').find('[type=submit]');
     let submitText = $(submit).html();
     // disabled submit button till form is validated
     $(submit).prop('disabled', true);
     $(submit).html('Ihre Bestellung wird bearbeitet...');
-    // prevent submitting form
-    event.preventDefault();
     setTimeout(function () {
       // request validation and submit form to API
       $.ajax({
@@ -17,7 +17,7 @@ $(document).ready(function () {
         dataType: 'json',
         crossDomain: true,
         data: checklist,
-        success: function (res) {
+        success: function () {
           $('#checklist').hide();
           $('#success').show();
         },
@@ -40,19 +40,3 @@ $(document).ready(function () {
 
   });
 });
-
-$.fn.serializeObject = function () {
-  var o = {};
-  var a = this.serializeArray();
-  $.each(a, function () {
-    if (o[this.name] !== undefined) {
-      if (!o[this.name].push) {
-        o[this.name] = [o[this.name]];
-      }
-      o[this.name].push(this.value || '');
-    } else {
-      o[this.name] = this.value || '';
-    }
-  });
-  return o;
-};
