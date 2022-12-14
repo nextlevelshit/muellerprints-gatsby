@@ -11,12 +11,15 @@ order: 3
 	<h3>Bestellformular bitte sorgfältig ausfüllen</h3>
 	<div className="text-small">[*] Pflichtangaben</div>
 	<br />
-	<div id="success" className="alert alert-info text-center hidden">
-		Ihre Bestellung wurde erfolgreich verschickt! Bei Rückfragen können Sie uns werktags unter + 49
-		(0)711 / 262 49 64 erreichen.
+	<div id="success" className="alert alert-info" style="display: none;">
+		<center>
+			Ihre Bestellung wurde erfolgreich verschickt! Bei Rückfragen können Sie uns werktags unter
+			+ 49 (0)711 / 262 49 64 erreichen.
+		</center>
 	</div>
-	<h3>Rechnungsanschrift</h3>
 	<div id="notifications" className="alert alert-danger hidden" />
+
+	<h3>Rechnungsanschrift</h3>
 
 	<div className="row">
 		<form className="form" method="POST" id="checklist">
@@ -36,16 +39,20 @@ order: 3
 				</div>
 			</div>
 
-			<label className="control-label col-sm-8">Postleitzahl*</label>
-			<div className="col-sm-8">
-				<input type="text" className="form-control" placeholder="" id="zip" name="zip" />
-				<span className="help-block" />
+			<div className="form-group">
+				<label className="control-label col-sm-8">Postleitzahl *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="zip" name="zip" />
+					<span className="help-block" />
+				</div>
 			</div>
 
-			<label className="control-label col-sm-5">Stadt *</label>
-			<div className="col-sm-8">
-				<input type="text" className="form-control" placeholder="" id="town" name="town" />
-				<span className="help-block" />
+			<div className="form-group">
+				<label className="control-label col-sm-5">Stadt *</label>
+				<div className="col-sm-8">
+					<input type="text" className="form-control" placeholder="" id="town" name="town" />
+					<span className="help-block" />
+				</div>
 			</div>
 
 			<div className="form-group">
@@ -177,7 +184,7 @@ order: 3
 						ihre Richtigkeit, bevor Sie das Formular abschicken.</strong>
 					<br />
 					<br />
-					<button className="btn btn-primary">Abschicken</button>
+					<button type="submit" className="btn btn-primary">Abschicken</button>
 				</div>
 			</div>
 		</form>
