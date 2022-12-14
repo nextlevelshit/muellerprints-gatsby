@@ -1,14 +1,14 @@
 $(document).ready(function () {
   $('#inquiry').submit(function (event) {
+		// prevent submitting form
+		event.preventDefault();
 
-    let inquiry = $(this).serializeObject();
+		let inquiry = $(this).serialize();
     let submit = $('#inquiry').find('[type=submit]');
     let submitText = $(submit).html();
     // disabled submit button till form is validated
     $(submit).prop('disabled', true);
     $(submit).html('Ihre Anfrage wird bearbeitet...');
-    // prevent submitting form
-    event.preventDefault();
     setTimeout(function () {
       // request validation and submit form to API
       $.ajax({
@@ -37,22 +37,5 @@ $(document).ready(function () {
         }
       })
     }, 800);
-
   });
 });
-
-$.fn.serializeObject = function () {
-  var o = {};
-  var a = this.serializeArray();
-  $.each(a, function () {
-    if (o[this.name] !== undefined) {
-      if (!o[this.name].push) {
-        o[this.name] = [o[this.name]];
-      }
-      o[this.name].push(this.value || '');
-    } else {
-      o[this.name] = this.value || '';
-    }
-  });
-  return o;
-};

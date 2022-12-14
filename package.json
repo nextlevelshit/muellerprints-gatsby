@@ -7,6 +7,7 @@
 	"scripts": {
 		"start": "gatsby develop",
 		"clean": "gatsby clean",
+		"serve": "gatsby serve",
 		"build": "gatsby build --prefix-paths",
 		"publish": "git add . && git commit -am \"Content update\" && git push"
 	},

@@ -82,6 +82,10 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 					}}
 			/>
 			{/* End Matomo Code */}
+			<script
+				src="https://code.jquery.com/jquery-3.6.2.min.js"
+				integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+				crossOrigin="anonymous"></script>
 			<script type="text/javascript" src="/scripts/scroll-top.js" />
 			<script type="text/javascript" src="/scripts/send-inquiry.js" />
 			<script type="text/javascript" src="/scripts/send-checklist.js" />
