@@ -8831,7 +8831,7 @@ label {
 .btn-primary {
 	color: #fff;
 	background-color: #2b52d5;
-	border: 1px solid #fff;
+	border: 1px solid #fff; 
 }
 
 .btn-primary:hover {
@@ -10348,7 +10348,7 @@ a.text-white:focus {
 .navbar {
 	border-radius: 0;
 	border-bottom: 8px solid #777777;
-	min-height: 65px;
+	min-height: 68px;
 }
 
 .navbar-collapse {
@@ -10466,7 +10466,7 @@ a.text-white:focus {
 	border-left: 1px solid #222222;
 	color: #999999;
 	float: left;
-	line-height: 65px;
+	line-height: 68px;
 }
 
 .navbar-mobile-cart {
@@ -10545,9 +10545,8 @@ a.text-white:focus {
 	font-size: medium;
 	background: #222222;
 	padding: 2.5rem 0 2rem;
-	height: auto;
 	width: 100%;
-	height: 65px;
+	height: 68px;
 	/* Hide up from medium devices */
 }
 
