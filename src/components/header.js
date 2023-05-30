@@ -17,7 +17,6 @@ const Header = ({ title: pageTitle, color, pagination, location }) => {
 					slug
 					frontmatter {
 						background
-						badge
 						description
 						navigation
 						title
