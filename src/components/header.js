@@ -18,6 +18,7 @@ const Header = ({ title: pageTitle, color, pagination, location }) => {
 					frontmatter {
 						background
 						description
+						badge
 						navigation
 						title
 					}
