@@ -10,7 +10,7 @@ module.exports = {
 	/**
 	 * Alternative Site title for SEO
 	 */
-	siteTitleAlt: "MUELLERPRINTS. Ihre Digitaldruckerei in Stuttgart für hohe Ansprüche",
+	siteTitleAlt: "MUELLERPRINTS. Die Digitaldruckerei in Stuttgart für ausgefallene Ideen",
 	/**
 	 * Domain of your site without trailing slash
 	 */
@@ -34,7 +34,7 @@ module.exports = {
 	/**
 	 * Your site description
 	 */
-	siteDescription: "MUELLERPRINTS. Ihre Digitaldruckerei in Stuttgart für hohe Ansprüche",
+	siteDescription: "MUELLERPRINTS. Die Digitaldruckerei in Stuttgart für ausgefallene Ideen",
 	/**
 	 * Author for schemaORGJSONLD
 	 */
