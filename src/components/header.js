@@ -32,6 +32,8 @@ const Header = ({ title: pageTitle, color, pagination, location }) => {
 		...frontmatter
 	}))
 
+
+
 	return (
 		<nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			{/* <div class="navbar-logo">
@@ -71,6 +73,14 @@ const Header = ({ title: pageTitle, color, pagination, location }) => {
 									<div dangerouslySetInnerHTML={{ __html: nav.navigation }} />
 									{nav.badge && <span className="badge">{nav.badge}</span>}
 								</a>
+
+								{pagination && nav.slug.match(/beispiele/) && <ul className={"navbar-mobile-pagination"}>
+									<ul className={"navbar-logo-pagination"}>
+										{[...Array(9).keys()].slice(1).map((i) => <li key={i} className="navbar-mobile-pagination-item">
+											{isActivePagination(i) ? <span>Beispiel {i}</span> : <a href={`/beispiele/${i}`}>Beispiel {i}</a>}
+										</li>)}
+									</ul>
+								</ul>}
 							</li>
 						))}
 					</ul>
