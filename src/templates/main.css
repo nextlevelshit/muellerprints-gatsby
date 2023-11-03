@@ -10461,8 +10461,7 @@ a.text-white:focus {
 	left: 0;
 	bottom: 0;
 	background: transparent;
-	border-right: 1px solid #222222;
-	border-left: 1px solid #222222;
+	border: 1px solid #222222;
 	color: #999999;
 	float: left;
 	line-height: 68px;
