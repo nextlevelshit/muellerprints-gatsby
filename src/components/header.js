@@ -55,7 +55,6 @@ const Header = ({ title: pageTitle, color, pagination, location }) => {
 								aria-controls="navbar"
 							>
 								<span className="glyphicon glyphicon-menu-hamburger" />
-								<small>Menü</small>
 							</button>
 							<div className={`navbar-brand text-${color}`}>{pageTitle ?? config.siteBrand}</div>
 						</div>
