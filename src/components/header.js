@@ -76,7 +76,7 @@ const Header = ({ title: pageTitle, color, pagination, location }) => {
 								{pagination && nav.slug.match(/beispiele/) && <ul className={"navbar-mobile-pagination"}>
 									<ul className={"navbar-logo-pagination"}>
 										{[...Array(9).keys()].slice(1).map((i) => <li key={i} className="navbar-mobile-pagination-item">
-											{isActivePagination(i) ? <span>Beispiel {i}</span> : <a href={`/beispiele/${i}`}>Beispiel {i}</a>}
+											{isActivePagination(i) ? <span>{i}</span> : <a href={`/beispiele/${i}`}>{i}</a>}
 										</li>)}
 									</ul>
 								</ul>}
