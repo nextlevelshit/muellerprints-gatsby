@@ -10482,12 +10482,12 @@ a.text-white:focus {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	background: transparent;
+	background: #333333;
 }
 
 .navbar-mobile-logo-pagination a:hover {
 	color: #fff;
-	background: rgba(255, 255, 255, 0.1) !important;
+	background: #a3160d !important;
 }
 
 .navbar-mobile-pagination {
