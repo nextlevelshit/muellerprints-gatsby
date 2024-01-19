@@ -13,7 +13,7 @@ $(document).ready(function () {
       // request validation and submit form to API
       $.ajax({
         method: 'POST',
-        url: 'https://picasso.uber.space/api/v1/',
+        url: 'https://muellerprints.de/api/mail',
         dataType: 'json',
         crossDomain: true,
         data: inquiry,
