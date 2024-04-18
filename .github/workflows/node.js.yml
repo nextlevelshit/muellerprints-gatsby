@@ -25,7 +25,6 @@ jobs:
           cache: "npm"
       - run: npm ci --legacy-peer-deps --prefer-offline --no-audit --progress=false --registry https://registry.npmjs.org
       - run: npm run build
-#      - run: ls -a
 
       - name: SSH Clean
         uses: appleboy/ssh-action@master
@@ -34,7 +33,9 @@ jobs:
           username: ${{ secrets.TELEKOM_USER }}
           password: ${{ secrets.TELEKOM_PASS }}
           port: ${{ secrets.TELEKOM_PORT }}
-          script: rm -r /home/www/public_html/* || true
+          script: |
+            shopt -s extglob
+            rm -r /home/www/public_html/!(api.php) || true
 
       - name: SSH Copy
         uses: youxingz/sshpass-scp-action@v3
@@ -46,14 +47,5 @@ jobs:
           pass: ${{ secrets.TELEKOM_PASS }}
           dist: /home/www/public_html
           src: public/*
-
-#    - name: Publish
-#      uses: easingthemes/ssh-deploy@v3.0.1
-#      env:
-#          SSH_PRIVATE_KEY: ${{ secrets.TELEKOM_SSH }}
-#          REMOTE_HOST: ${{ secrets.TELEKOM_HOST }}
-#          REMOTE_USER: ${{ secrets.TELEKOM_AUTH }}
-#          TARGET: /home/www/pablo
-#          SOURCE: /public
 
 
