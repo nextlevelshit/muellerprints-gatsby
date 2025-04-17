@@ -14,34 +14,37 @@ const Meta = ({ pagePath = "", pageSEO }) => {
 	description = pageSEO?.description ?? config.siteDescription
 	image = baseUrl + (pageSEO?.image ?? config.siteBanner)
 
-	const schemaOrgJSONLD = [
-		{
-			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"@id": url,
-			url,
-			name: title,
-			description: config.siteDescription,
-			alternateName: config.siteTitleAlt ?? "",
-			author: {
-				"@type": "Person",
-				name: config.siteAuthor,
-			},
-			publisher: {
-				"@type": "Organization",
-				name: config.siteAuthor,
-				logo: {
-					"@type": "ImageObject",
-					url: baseUrl + config.siteLogo,
-				},
-			},
-			isPartOf: baseUrl,
-			mainEntityOfPage: {
+	const schemaOrgJSONLD = {
+        "@context": "http://schema.org",
+        "@graph": [
+			{
+				"@context": "https://schema.org",
 				"@type": "WebSite",
 				"@id": url,
+				url,
+				name: title,
+				description: config.siteDescription,
+				alternateName: config.siteTitleAlt ?? "",
+				author: {
+					"@type": "Person",
+					name: config.siteAuthor,
+				},
+				publisher: {
+					"@type": "Organization",
+					name: config.siteAuthor,
+					logo: {
+						"@type": "ImageObject",
+						url: baseUrl + config.siteLogo,
+					},
+				},
+				isPartOf: baseUrl,
+				mainEntityOfPage: {
+					"@type": "WebSite",
+					"@id": url,
+				},
 			},
-		},
-	]
+		]
+	}
 
 	return (
 		<Helmet>
