@@ -170,6 +170,7 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: button;
+	appearance: button;
 	cursor: pointer;
 }
 
@@ -201,12 +202,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
 	-webkit-appearance: textfield;
+	appearance: textfield;
 	box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
+	appearance: none;
 }
 
 fieldset {
@@ -3398,6 +3401,7 @@ textarea.form-control {
 
 input[type="search"] {
 	-webkit-appearance: none;
+	appearance: none;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -7329,6 +7333,7 @@ button.close {
 	background: transparent;
 	border: 0;
 	-webkit-appearance: none;
+	appearance: none;
 }
 
 .modal-open {
