@@ -74,6 +74,7 @@ module.exports = {
 				display: "standalone",
 				icon: config.favicon
 			}
-		}
+		},
+
 	]
 }
