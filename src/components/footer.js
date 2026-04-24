@@ -7,10 +7,10 @@ const Footer = () => {
 				<div className="centered">
 					<div className="row">
 						{/* Branding/Adresse links */}
-						<div className="col-lg-3 col-md-3 col-sm-6">
+						<div className="col-lg-4 col-md-4 col-sm-8">
 							<div className="footer_dv">
 								<br />
-								<strong>MUELLERPRINTS.<br />STUTTGART</strong>
+								<h4>MUELLERPRINTS.</h4>						
 								<ul>
 									<li />
 									<li>T + 49 (0)711 / 262 49 64</li>
@@ -20,7 +20,7 @@ const Footer = () => {
 						</div>
 
 						{/* Kontakt */}
-						<div className="col-lg-3 col-md-3 col-sm-6">
+						<div className="col-lg-4 col-md-4 col-sm-8">
 							<div className="footer_dv">
 								<br />
 								<h4>KONTAKT</h4>
@@ -33,30 +33,15 @@ const Footer = () => {
 							</div>
 						</div>
 
-						{/* About */}
-						<div className="col-lg-3 col-md-3 col-sm-6">
-							<div className="footer_dv">
-								<br />
-								<h4>ABOUT</h4>
-								<ul>
-									<li />
-									<li><a href="/bestellverlauf">Bestellverlauf</a></li>
-									<li><a href="/versandarten">Versandarten</a></li>
-									<li><a href="/payment">Zahlungsarten</a></li>
-								</ul>
-							</div>
-						</div>
-
 						{/* Rechtliches */}
-						<div className="col-lg-3 col-md-3 col-sm-6">
+						<div className="col-lg-4 col-md-4 col-sm-8">
 							<div className="footer_dv">
 								<br />
 								<h4>RECHTLICHES</h4>
 								<ul>
 									<li />
 									<li><a href="/disclaimer">Datenschutzerklärung</a></li>
-									<li><a href="/cookies">Verwendung von Cookies</a></li>
-									<li><a href="/agbs">Allgemeine Geschäftsbedingungen</a></li>
+									<li><a href="/payment">Zahlungsarten</a></li>
 									<li><a href="/sitemap.xml">Sitemap</a></li>
 								</ul>
 							</div>
