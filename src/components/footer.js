@@ -42,7 +42,7 @@ const Footer = () => {
 									<li />
 									<li><a href="/disclaimer">Datenschutzerklärung</a></li>
 									<li><a href="/payment">Zahlungsarten</a></li>
-									<li><a href="/sitemap.xml">Sitemap</a></li>
+									<li><a href="/sitemap">Sitemap</a></li>
 								</ul>
 							</div>
 						</div>
