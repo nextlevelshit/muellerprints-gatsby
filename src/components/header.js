@@ -53,6 +53,7 @@ const Header = ({ title: pageTitle, color, pagination, location }) => {
 								data-target="#navbar"
 								aria-expanded="false"
 								aria-controls="navbar"
+								aria-label="Menü öffnen"
 							>
 								<span className="glyphicon glyphicon-menu-hamburger" />
 							</button>
